@@ -11,7 +11,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Database setup
-DATABASE_URL = "postgresql://user:password@localhost/taskdb"
+#database = input("Enter database name: ")
+#user = input("Enter username: ")
+#password = input("Enter user's password: ")
+DATABASE_URL = "postgresql://postgres:root@localhost/postgres"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
